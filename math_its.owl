@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/its_math.owl"
+         xmlns="http://example.org/its_math.owl#">
+
+<owl:Ontology rdf:about="http://example.org/its_math.owl"/>
+
+<owl:DatatypeProperty rdf:about="#hasName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#MathConcept"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasExplanation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#MathConcept"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasExample">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#MathConcept"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasRule">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#MathConcept"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#MathConcept">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Addition">
+  <rdfs:subClassOf rdf:resource="#MathConcept"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Subtraction">
+  <rdfs:subClassOf rdf:resource="#MathConcept"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Multiplication">
+  <rdfs:subClassOf rdf:resource="#MathConcept"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Division">
+  <rdfs:subClassOf rdf:resource="#MathConcept"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#AdditionConcept">
+  <rdf:type rdf:resource="#Addition"/>
+  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 + 3 = 5</hasExample>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition</hasName>
+  <hasExplanation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition is the process of combining numbers to find their total.</hasExplanation>
+  <hasRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a + b = c</hasRule>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SubtractionConcept">
+  <rdf:type rdf:resource="#Subtraction"/>
+  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 - 2 = 3</hasExample>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtraction</hasName>
+  <hasExplanation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtraction is finding the difference between numbers.</hasExplanation>
+  <hasRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a - b = c</hasRule>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MultiplicationConcept">
+  <rdf:type rdf:resource="#Multiplication"/>
+  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 × 4 = 12</hasExample>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiplication</hasName>
+  <hasExplanation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiplication is repeated addition of the same number.</hasExplanation>
+  <hasRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a × b = c</hasRule>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DivisionConcept">
+  <rdf:type rdf:resource="#Division"/>
+  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 ÷ 2 = 5</hasExample>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division</hasName>
+  <hasExplanation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division splits a number into equal parts.</hasExplanation>
+  <hasRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a ÷ b = c</hasRule>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
